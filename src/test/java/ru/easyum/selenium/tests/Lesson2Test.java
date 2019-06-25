@@ -11,9 +11,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.easyum.selenium.DriverInitializer;
 
-public class MyFirstTest {
+public class Lesson2Test {
 
-    private static final Logger logger = LoggerFactory.getLogger(MyFirstTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(Lesson2Test.class);
     private WebDriver driver;
 
     @Before
