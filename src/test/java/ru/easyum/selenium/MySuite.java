@@ -8,7 +8,7 @@ import ru.easyum.selenium.tests.MySecondTest;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
     MyFirstTest.class,
-    MySecondTest.class,
+ //   MySecondTest.class,
 })
 public class MySuite {
 }
