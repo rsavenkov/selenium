@@ -2,13 +2,13 @@ package ru.easyum.selenium;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import ru.easyum.selenium.tests.MyFirstTest;
-import ru.easyum.selenium.tests.MySecondTest;
+import ru.easyum.selenium.tests.Lesson2Test;
+import ru.easyum.selenium.tests.Lesson3Test;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-    MyFirstTest.class,
- //   MySecondTest.class,
+    Lesson2Test.class,
+    Lesson3Test.class,
 })
 public class MySuite {
 }
