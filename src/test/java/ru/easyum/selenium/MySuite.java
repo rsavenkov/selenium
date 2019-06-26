@@ -7,7 +7,7 @@ import ru.easyum.selenium.tests.Lesson3Test;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-//    Lesson2Test.class,
+    Lesson2Test.class,
     Lesson3Test.class,
 })
 public class MySuite {
