@@ -1,14 +1,15 @@
 package ru.easyum.selenium.tests;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.easyum.selenium.DriverInitializer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,17 +18,9 @@ import java.util.Set;
 /**
  * Get values, filling form, popups and etc.
  */
-public class Lesson4Test {
+public class Lesson4Test extends BaseTest {
 
     private static final Logger logger = LoggerFactory.getLogger(Lesson4Test.class);
-    private WebDriver driver;
-    private JavascriptExecutor js;
-
-    @Before
-    public void before() {
-        driver = DriverInitializer.getInstance().getDriver();
-        js = (JavascriptExecutor) driver;
-    }
 
     @Test
     public void gettingTextValues() throws InterruptedException {

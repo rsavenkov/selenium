@@ -1,32 +1,21 @@
 package ru.easyum.selenium.tests;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.easyum.selenium.DriverInitializer;
 
 import java.util.List;
 
 /**
  * Locating UI elements
  */
-public class Lesson3Test {
+public class Lesson3Test extends BaseTest {
 
     private static final Logger logger = LoggerFactory.getLogger(Lesson3Test.class);
-    private WebDriver driver;
-    private JavascriptExecutor js;
-
-    @Before
-    public void before() {
-        driver = DriverInitializer.getInstance().getDriver();
-        js = (JavascriptExecutor) driver;
-    }
 
     @Test
     public void byID() throws InterruptedException {
@@ -99,7 +88,7 @@ public class Lesson3Test {
         logger.info("Using javaScript-1");
         driver.get("C:\\Users\\Ruslan\\Projects\\selenium\\selenium\\trunk\\src\\test\\resources\\test.html");
         Thread.sleep(2000);
-        WebElement element = (WebElement) ((JavascriptExecutor)driver).executeScript("return $('.my-class')[0]");
+        WebElement element = (WebElement) ((JavascriptExecutor) driver).executeScript("return $('.my-class')[0]");
         js.executeScript("arguments[0].setAttribute('style', 'background-color: blue')", element);
         Thread.sleep(2000);
     }
@@ -110,9 +99,9 @@ public class Lesson3Test {
         driver.get("https://www.seleniumhq.org/");
         Thread.sleep(2000);
         js.executeScript("var ps = document.getElementsByTagName('p');" +
-                        "for (var i = 0; i < ps.length; i++) {" +
-                        "   ps[i].setAttribute('style', 'font-size: 14px')" +
-                        "}");
+                "for (var i = 0; i < ps.length; i++) {" +
+                "   ps[i].setAttribute('style', 'font-size: 14px')" +
+                "}");
         Thread.sleep(2000);
     }
 

@@ -1,7 +1,6 @@
 package ru.easyum.selenium.tests;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,20 +8,14 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.easyum.selenium.DriverInitializer;
 
-public class Lesson2Test {
+public class Lesson2Test extends BaseTest {
 
     private static final Logger logger = LoggerFactory.getLogger(Lesson2Test.class);
-    private WebDriver driver;
-
-    @Before
-    public void before() {
-        driver = DriverInitializer.getInstance().getDriver();
-    }
 
     @Test
     public void openSomeUrl() throws InterruptedException {
+        logger.info("Open some url test");
         driver.get("https://www.seleniumhq.org/");
         //TODO rewrite with WebDriverWait
         Thread.sleep(3000);
