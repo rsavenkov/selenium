@@ -1,10 +1,15 @@
 package ru.easyum.selenium.tests;
 
+import com.google.common.base.Function;
 import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,16 +55,37 @@ public class Lesson5Test extends BaseTest {
     public void fluentWait() {
         logger.info("Explicit waiting with selenium FluentWait");
 
-        /*Wait wait = new FluentWait(driver).withTimeout(30, SECONDS)
+        driver.get("http://localhost:8080");
+
+        Wait wait = new FluentWait(driver).withTimeout(30, SECONDS)
                 .pollingEvery(5, SECONDS).ignoring(NoSuchElementException.class);
 
 
-        WebElement foo = (WebElement) wait.until(new Function<WebDriver, WebElement>() {
+        WebElement we = (WebElement) wait.until(new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {
-                return driver.findElement(By.id("foo"));
+                return driver.findElement(By.id("time1"));
             }
-        });*/
+        });
 
+        logger.info(we.toString());
+    }
+
+    @Test
+    public void pageLoadTimeout() {
+        logger.info("Page load timeout");
+        driver.manage().timeouts().pageLoadTimeout(5, SECONDS);
+        driver.get("http://localhost:8080");
+        WebElement we = driver.findElement(By.id("time"));
+        assertNotNull(we);
+    }
+
+    @Test
+    public void scriptLoadTimeout() {
+        logger.info("Script load timeout");
+        driver.manage().timeouts().setScriptTimeout(2, SECONDS);
+        driver.get("http://localhost:8080");
+        WebElement we = driver.findElement(By.tagName("p"));
+        assertNotNull(we);
     }
 
     @Test
@@ -75,11 +101,6 @@ public class Lesson5Test extends BaseTest {
         WebElement ul = driver.findElement(By.tagName("ul"));
 
         assertNotNull("Container element is null!", ul);
-    }
-
-    @Test
-    public void remoteWebDriver() {
-        logger.info("Selenium remote web driver");
     }
 
     @After

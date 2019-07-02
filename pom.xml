@@ -34,6 +34,11 @@
             <artifactId>slf4j-nop</artifactId>
             <version>1.7.26</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>9.3.9.v20160517</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -45,6 +50,17 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution><goals><goal>java</goal></goals></execution>
+                </executions>
+                <configuration>
+                    <mainClass>ru.easyum.selenium.TestServer</mainClass>
                 </configuration>
             </plugin>
         </plugins>
