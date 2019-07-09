@@ -4,8 +4,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import ru.easyum.selenium.tests.Lesson2Test;
-import ru.easyum.selenium.tests.Lesson3Test;
+import ru.easyum.selenium.tests.*;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
@@ -14,6 +13,7 @@ import ru.easyum.selenium.tests.Lesson3Test;
 //    Lesson4Test.class,
 //    Lesson5Test.class,
 //    Lesson6Test.class,
+//        RestAssuredTest
 })
 public class TestSuite {
 
