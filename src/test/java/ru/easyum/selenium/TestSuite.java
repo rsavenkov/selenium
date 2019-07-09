@@ -13,6 +13,7 @@ import ru.easyum.selenium.tests.Lesson3Test;
 //        Lesson3Test.class,
 //    Lesson4Test.class,
 //    Lesson5Test.class,
+//    Lesson6Test.class,
 })
 public class TestSuite {
 
