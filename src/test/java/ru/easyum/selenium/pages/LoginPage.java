@@ -33,8 +33,9 @@ public class LoginPage {
     }
 
     public HomePage successLogin() {
-        login.sendKeys("lubajnka@mail.ru");
-        password.sendKeys("$avenkoV1");
+        //TODO replace correct authorities
+        login.sendKeys("my_mail@mail.ru");
+        password.sendKeys("123456");
         checkIn.findElement(By.tagName("input")).click();
         return new HomePage(driver);
     }

@@ -21,7 +21,7 @@ public class Lesson6Test extends BaseTest {
         driver.get("https://mail.ru/");
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.setLogin("lubajnka@mail.ru");
+        loginPage.setLogin("my_mail@mail.ru");
         loginPage.setPassword("123456");
         loginPage.clickLogin();
 

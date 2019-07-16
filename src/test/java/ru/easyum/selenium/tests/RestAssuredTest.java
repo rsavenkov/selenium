@@ -36,7 +36,8 @@ public class RestAssuredTest {
 
     @Test
     public void mailAuthentication() {
-        given().auth().preemptive().basic("lubajnka@mail.ru", "123456")
+        //TODO replace correct authorities
+        given().auth().preemptive().basic("my_mail@mail.ru", "123456")
                 .when().get("https://mail.ru/auth.mail.ru/cgi-bin/auth?from=splash")
                 .then().statusCode(200);
     }
