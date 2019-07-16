@@ -8,12 +8,12 @@ import ru.easyum.selenium.tests.*;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-//        Lesson2Test.class,
-//        Lesson3Test.class,
-//    Lesson4Test.class,
-//    Lesson5Test.class,
-//    Lesson6Test.class,
-//        RestAssuredTest
+        Lesson2Test.class,
+        Lesson3Test.class,
+        Lesson4Test.class,
+        Lesson5Test.class,
+        Lesson6Test.class,
+        RestAssuredTest.class
 })
 public class TestSuite {
 
