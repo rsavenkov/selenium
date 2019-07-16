@@ -31,9 +31,9 @@ public class Lesson7Test {
         selenium.waitForPageToLoad("30000");
     }
 
-    @After
+    /*@After
     public void after() {
         selenium.stop();
-    }
+    }*/
 
 }

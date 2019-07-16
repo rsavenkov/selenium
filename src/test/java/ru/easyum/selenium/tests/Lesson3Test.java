@@ -106,8 +106,8 @@ public class Lesson3Test extends BaseTest {
     }
 
 
-    @After
+    /*@After
     public void after() {
         driver.quit();
-    }
+    }*/
 }

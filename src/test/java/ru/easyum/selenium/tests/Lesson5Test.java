@@ -103,8 +103,8 @@ public class Lesson5Test extends BaseTest {
         assertNotNull("Container element is null!", ul);
     }
 
-    @After
+    /*@After
     public void after() {
         driver.quit();
-    }
+    }*/
 }

@@ -60,8 +60,8 @@ public class Lesson6Test extends BaseTest {
         assertNotNull(loginPage.getCheckIn());
     }
 
-    @After
+    /*@After
     public void after() {
         driver.quit();
-    }
+    }*/
 }

@@ -132,8 +132,8 @@ public class Lesson4Test extends BaseTest {
         Thread.sleep(3000);
     }
 
-    @After
+    /*@After
     public void after() {
         driver.quit();
-    }
+    }*/
 }
