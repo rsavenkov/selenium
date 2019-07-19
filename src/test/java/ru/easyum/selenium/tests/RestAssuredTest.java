@@ -2,6 +2,7 @@ package ru.easyum.selenium.tests;
 
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +19,7 @@ import static org.hamcrest.CoreMatchers.hasItems;
 public class RestAssuredTest {
 
     private static final Logger logger = LoggerFactory.getLogger(Lesson6Test.class);
-
+    @Ignore
     @Test
     public void getCountry() {
         get("https://restcountries.eu/rest/v2/capital/Moscow")
