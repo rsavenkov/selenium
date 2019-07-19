@@ -1,6 +1,7 @@
 package ru.easyum.selenium.tests;
 
 import org.junit.After;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -82,7 +83,7 @@ public class Lesson3Test extends BaseTest {
             Thread.sleep(1000);
         }
     }
-
+    @Ignore
     @Test
     public void javaScript1() throws InterruptedException {
         logger.info("Using javaScript-1");
