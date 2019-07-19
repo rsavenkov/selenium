@@ -13,7 +13,7 @@
     </properties>
 
     <dependencies>
-        <!-- important place before junit dependency declaration -->
+        <!-- important place rest-assured before junit dependency declaration -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -76,7 +76,11 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.1</version>
                 <executions>
-                    <execution><goals><goal>java</goal></goals></execution>
+                    <execution>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
                 </executions>
                 <configuration>
                     <mainClass>ru.easyum.selenium.TestServer</mainClass>
