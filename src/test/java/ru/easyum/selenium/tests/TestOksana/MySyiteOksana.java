@@ -1,4 +1,4 @@
-package ru.easyum.selenium.tests;
+package ru.easyum.selenium.tests.TestOksana;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

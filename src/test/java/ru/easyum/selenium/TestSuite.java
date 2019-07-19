@@ -10,9 +10,9 @@ import ru.easyum.selenium.tests.*;
 @Suite.SuiteClasses({
         Lesson2Test.class,
         Lesson3Test.class,
-        Lesson4Test.class,
-        Lesson5Test.class,
-        Lesson6Test.class,
+      //  Lesson4Test.class,
+      //  Lesson5Test.class,
+      //  Lesson6Test.class,
         RestAssuredTest.class
 })
 public class TestSuite {

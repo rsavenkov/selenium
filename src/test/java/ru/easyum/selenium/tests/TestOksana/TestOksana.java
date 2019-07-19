@@ -1,11 +1,9 @@
-package ru.easyum.selenium.tests;
+package ru.easyum.selenium.tests.TestOksana;
 
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.easyum.selenium.DriverInitializer;
 
 import java.util.List;
@@ -43,12 +41,11 @@ public class TestOksana {
         Thread.sleep(3000);
 
         // Ищем первую строку в поисковике
-        List<WebElement> findElements = driver.findElements(By.linkText("Википедия — свободная энциклопедия"));
+        List<WebElement> findElements = driver.findElements(By.partialLinkText("Википедия — свободная энциклопедия"));
 
-        if (!findElements.isEmpty())
-        {
+        if (!findElements.isEmpty()) {
             findElements.get(0).click();
-    }
+        }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         /*(new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
@@ -59,9 +56,10 @@ public class TestOksana {
         System.out.println("Page title is: " + driver.getTitle());
     }
 
+
+
     @AfterClass
     public static void after() {
-
         DriverInitializer.getInstance().getDriver().quit();
     }
 }

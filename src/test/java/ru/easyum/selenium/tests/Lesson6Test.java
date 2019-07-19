@@ -2,6 +2,10 @@ package ru.easyum.selenium.tests;
 
 import org.junit.After;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.easyum.selenium.pages.HomePage;
@@ -56,6 +60,11 @@ public class Lesson6Test extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = loginPage.successLogin();
         LoginPage loginPage1 = homePage.logout();
+
+        WebElement myDynamicElement =
+                (new WebDriverWait(driver, 10))
+                .until(ExpectedConditions.
+                        visibilityOf(loginPage1.getCheckIn()));
 
         assertNotNull(loginPage.getCheckIn());
     }

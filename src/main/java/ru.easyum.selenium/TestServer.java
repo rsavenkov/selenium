@@ -5,9 +5,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import java.io.IOException;
 
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.Request;
-import org.eclipse.jetty.server.handler.AbstractHandler;
+import org.seleniumhq.jetty9.server.Server;
+import org.seleniumhq.jetty9.server.Request;
+import org.seleniumhq.jetty9.server.handler.AbstractHandler;
 
 /**
  * Embedded jetty server
