@@ -1,0 +1,75 @@
+{
+  "id": "ebaff303-00a4-4336-9d89-d96021a46baa",
+  "version": "2.0",
+  "name": "test",
+  "url": "https://test.mirvracha.ru",
+  "tests": [{
+    "id": "dc770ed2-fa91-417f-b377-a8a8a686ba2d",
+    "name": "case-1",
+    "commands": [{
+      "id": "e2e2f353-a480-4ab6-9c53-fd524f6b2e77",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72c1c4a7-5c81-4e9c-8062-7e5af6acf4b7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20ce8e3d-9091-4e3d-a6a6-bb47af59e1d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.placeholder",
+      "targets": [
+        ["css=.placeholder", "css:finder"],
+        ["xpath=//div[@id='main']/div[2]/div/div/div[2]/form/div[2]/div/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Выберите свой статус')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9272a15d-476b-4f28-9623-b7f6d6ddf5ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=TopLoginForm",
+      "targets": [
+        ["id=TopLoginForm", "id"],
+        ["name=TopLoginForm", "name"],
+        ["css=#TopLoginForm", "css:finder"],
+        ["xpath=//form[@id='TopLoginForm']", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div[2]/div/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6afc228-f184-4c46-9743-17a44e7c272b",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='TopLoginForm']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "5349"
+    }]
+  }],
+  "suites": [{
+    "id": "e48f5bd3-469f-48c0-8279-ad59a082a186",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dc770ed2-fa91-417f-b377-a8a8a686ba2d"]
+  }],
+  "urls": ["https://test.mirvracha.ru/"],
+  "plugins": []
+}
